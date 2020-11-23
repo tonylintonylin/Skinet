@@ -32,7 +32,7 @@ namespace API
             {
                 x.UseSqlite(_config.GetConnectionString("DefaultConnection"));
             });
-            
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
@@ -52,6 +52,7 @@ namespace API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseStaticFiles();
 
             app.UseAuthorization();
 
