@@ -15,7 +15,7 @@ namespace Infrastructure.Data
             // where
             if(spec.Criteria != null)
             {
-                query = query.Where(spec.Criteria); // p => p.ProductTypeId == id
+                query = query.Where(spec.Criteria); // p => p.ProductTypeId == id, brand, type, etc.
             }
 
             if(spec.OrderBy != null)
