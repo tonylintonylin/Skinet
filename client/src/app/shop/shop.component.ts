@@ -70,11 +70,13 @@ export class ShopComponent implements OnInit {
 
   onBrandSelected(brandId: number): void {
     this.shopParams.brandId = brandId;
+    this.shopParams.pageNumber = 1;
     this.getProducts();
   }
 
   onTypeSelected(typeId: number): void {
     this.shopParams.typeId = typeId;
+    this.shopParams.pageNumber = 1;
     this.getProducts();
   }
 
@@ -84,12 +86,15 @@ export class ShopComponent implements OnInit {
   }
 
   onPageChanged(event: any): void {
-    this.shopParams.pageNumber = event;
-    this.getProducts();
+    if (this.shopParams.pageNumber !== event) {
+      this.shopParams.pageNumber = event;
+      this.getProducts();
+    }
   }
 
   onSearch(): void {
     this.shopParams.search = this.searchTerm.nativeElement.value;
+    this.shopParams.pageNumber = 1;
     this.getProducts();
   }
 
