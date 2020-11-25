@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { type } from 'os';
 import { IBrand } from '../shared/models/brands';
 import { IProduct } from '../shared/models/product';
 import { IType } from '../shared/models/productType';
@@ -14,8 +13,8 @@ export class ShopComponent implements OnInit {
   products: IProduct[];
   brands: IBrand[];
   types: IType[];
-  brandIdSelected: number;
-  typeIdSelected: number;
+  brandIdSelected = 0;
+  typeIdSelected = 0;
 
   constructor(private shopService: ShopService) {}
 
