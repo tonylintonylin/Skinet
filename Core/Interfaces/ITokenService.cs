@@ -2,7 +2,7 @@ using Core.Entities.Identity;
 
 namespace Core.Interfaces
 {
-    public class ITokenService
+    public interface ITokenService
     {
         string CreateToken(AppUser user);
     }
