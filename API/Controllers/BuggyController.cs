@@ -7,11 +7,15 @@ namespace API.Controllers
 {
     public class BuggyController : BaseApiController
     {
+        # region Dependency Injection
+
         private readonly StoreContext _context;
         public BuggyController(StoreContext context)
         {
             _context = context;
         }
+
+        # endregion Dependency Injection
 
         [HttpGet("testauth")]
         [Authorize]

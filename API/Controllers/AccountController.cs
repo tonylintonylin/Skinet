@@ -15,6 +15,8 @@ namespace API.Controllers
 {
     public class AccountController : BaseApiController
     {
+        # region Dependency Injection
+
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly ITokenService _tokenService;
@@ -29,6 +31,8 @@ namespace API.Controllers
             _signInManager = signInManager;
             _userManager = userManager;
         }
+
+        # endregion Dependency Injection
 
         [Authorize]
         [HttpGet]

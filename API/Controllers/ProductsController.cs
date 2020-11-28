@@ -13,6 +13,8 @@ namespace API.Controllers
 {
     public class ProductsController : BaseApiController
     {
+        # region Dependency Injection
+
         private readonly IGenericRepository<Product> _productsRepo;
         private readonly IGenericRepository<ProductBrand> _productBrandRepo;
         private readonly IGenericRepository<ProductType> _productTypeRepo;
@@ -29,6 +31,8 @@ namespace API.Controllers
             _productBrandRepo = productBrandRepo;
             _productsRepo = productsRepo;
         }
+
+        # endregion Dependency Injection
 
         [HttpGet]
         public async Task<ActionResult<Pagination<ProductToReturnDTO>>> GetProducts(

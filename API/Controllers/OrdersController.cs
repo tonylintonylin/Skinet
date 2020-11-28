@@ -15,6 +15,8 @@ namespace API.Controllers
     [Authorize]
     public class OrdersController : BaseApiController
     {
+        # region Dependency Injection
+        
         private readonly IOrderService _orderService;
         private readonly IMapper _mapper;
 
@@ -24,6 +26,8 @@ namespace API.Controllers
             _mapper = mapper;
             _orderService = orderService;
         }
+
+        # endregion Dependency Injection
 
         [HttpPost]
         public async Task<ActionResult<Order>> CreateOrder(OrderDTO orderDTO)

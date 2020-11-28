@@ -64,17 +64,17 @@ namespace Infrastructure.Services
 
         public Task<IReadOnlyList<DeliveryMethod>> GetDeliveryMethodsAsync()
         {
-
+            throw new System.NotImplementedException();
         }
 
         public Task<Order> GetOrderByIdAsync(int id, string buyerEmail)
         {
-
+            throw new System.NotImplementedException();
         }
 
         public Task<IReadOnlyList<Order>> GetOrdersForUserAsync(string buyerEmail)
         {
-
+            throw new System.NotImplementedException();
         }
     }
 }
