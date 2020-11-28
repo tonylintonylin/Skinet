@@ -38,5 +38,27 @@ namespace API.Controllers
                 DisplayName = user.DisplayName
             };
         }
+
+        [HttpPost("register")]
+        public async Task<ActionResult<UserDTO>> Register(RegisterDTO registerDTO)
+        {
+            var user = new AppUser
+            {
+                Email = registerDTO.Email,
+                UserName = registerDTO.Email,
+                DisplayName = registerDTO.DisplayName
+            };
+
+            var result = await _userManager.CreateAsync(user, registerDTO.Password);
+
+            if(!result.Succeeded) return BadRequest(new ApiResponse(400));
+
+            return new UserDTO
+            {
+                Email = user.Email,
+                Token = "This will be a token",
+                DisplayName = user.DisplayName
+            };
+        }
     }
 }
