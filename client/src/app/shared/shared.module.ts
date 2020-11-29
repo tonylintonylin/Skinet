@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CdkStepperModule } from '@angular/cdk/stepper';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
@@ -21,6 +22,7 @@ import { StepperComponent } from './components/stepper/stepper.component';
     PaginationModule.forRoot(),
     CarouselModule.forRoot(),
     CdkStepperModule,
+    ReactiveFormsModule,
   ],
   exports: [
     PaginationModule,
@@ -30,6 +32,7 @@ import { StepperComponent } from './components/stepper/stepper.component';
     OrderTotalsComponent,
     CdkStepperModule,
     StepperComponent,
+    ReactiveFormsModule,
   ],
 })
 export class SharedModule {}
