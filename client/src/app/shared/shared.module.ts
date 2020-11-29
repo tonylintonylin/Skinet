@@ -9,6 +9,7 @@ import { PagingHeaderComponent } from './components/paging-header/paging-header.
 import { PagerComponent } from './components/pager/pager.component';
 import { OrderTotalsComponent } from './components/order-totals/order-totals.component';
 import { StepperComponent } from './components/stepper/stepper.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { StepperComponent } from './components/stepper/stepper.component';
     CommonModule,
     PaginationModule.forRoot(),
     CarouselModule.forRoot(),
+    BsDropdownModule.forRoot(),
     CdkStepperModule,
     ReactiveFormsModule,
   ],
@@ -33,6 +35,7 @@ import { StepperComponent } from './components/stepper/stepper.component';
     CdkStepperModule,
     StepperComponent,
     ReactiveFormsModule,
+    BsDropdownModule,
   ],
 })
 export class SharedModule {}
