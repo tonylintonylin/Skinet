@@ -10,6 +10,7 @@ import { PagerComponent } from './components/pager/pager.component';
 import { OrderTotalsComponent } from './components/order-totals/order-totals.component';
 import { StepperComponent } from './components/stepper/stepper.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TextInputComponent } from './components/text-input/text-input.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     PagerComponent,
     OrderTotalsComponent,
     StepperComponent,
+    TextInputComponent,
   ],
   imports: [
     CommonModule,
@@ -36,6 +38,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     StepperComponent,
     ReactiveFormsModule,
     BsDropdownModule,
+    TextInputComponent,
   ],
 })
 export class SharedModule {}
