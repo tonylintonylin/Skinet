@@ -12,6 +12,8 @@ namespace Infrastructure.Services
 {
     public class TokenService : ITokenService
     {
+        #region Dependency Injection
+
         private readonly IConfiguration _config;
         private readonly SymmetricSecurityKey _key;
         public TokenService(IConfiguration config)
@@ -19,6 +21,8 @@ namespace Infrastructure.Services
             _config = config;
             _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Token:Key"]));
         }
+
+        #endregion Dependency Injection
 
         public string CreateToken(AppUser user)
         {

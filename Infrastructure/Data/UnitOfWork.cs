@@ -9,11 +9,16 @@ namespace Infrastructure.Data
     public class UnitOfWork : IUnitOfWork
     {
         private Hashtable _repositories;
+
+        #region Dependency Injection
+
         private readonly StoreContext _context;
         public UnitOfWork(StoreContext context)
         {
             _context = context;
         }
+        
+        #endregion Dependency Injection
 
         public async Task<int> Complete()
         {

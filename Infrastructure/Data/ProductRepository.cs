@@ -8,11 +8,15 @@ namespace Infrastructure.Data
 {
     public class ProductRepository : IProductRepository
     {
+        #region Dependency Injection
+
         private readonly StoreContext _context;
         public ProductRepository(StoreContext context)
         {
             _context = context;
         }
+
+        #endregion Dependency Injection
 
         public async Task<Product> GetProductByIdAsync(int id)
         {

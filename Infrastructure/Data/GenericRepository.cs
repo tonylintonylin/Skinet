@@ -10,11 +10,15 @@ namespace Infrastructure.Data
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
+        #region Dependency Injection
+
         private readonly StoreContext _context;
         public GenericRepository(StoreContext context)
         {
             _context = context;
         }
+
+        #endregion Dependency Injection
 
         public async Task<T> GetByIdAsync(int id)
         {
