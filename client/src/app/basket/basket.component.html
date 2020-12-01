@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-12 py-5 mb-1">
                         <app-basket-summary (decrement)="decrementItemQuantity($event)"
-                            (increment)="incrementItemQuantity($event)" (remove)="removeBasketItem($event)">
+                            (increment)="incrementItemQuantity($event)" (remove)="removeBasketItem($event)"[items]="(basket$ | async).items">
                         </app-basket-summary>
                     </div>
                 </div>
